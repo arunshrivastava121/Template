@@ -1,0 +1,2 @@
+class Wadget < ApplicationRecord
+end

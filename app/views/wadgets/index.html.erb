@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Wadgets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wadgets.each do |wadget| %>
+      <tr>
+        <td><%= wadget.name %></td>
+        <td><%= link_to 'Show', wadget %></td>
+        <td><%= link_to 'Edit', edit_wadget_path(wadget) %></td>
+        <td><%= link_to 'Destroy', wadget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Wadget', new_wadget_path %>
